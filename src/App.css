@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.left-section, .right-section {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.left-content .header {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.left-content .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.left-content .logo img{
+  width : 250px;
+  height: 100px;
+}
+
+.left-content .sub-title {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.left-content p {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.contact-form input {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  width: calc(100% - 120px);
+  max-width: 300px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #FFFFFF;
+  background-color: #EA7B2C;
+  border-color: #EA7B2C;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.message {
+  margin-top: 10px;
+  color: red; 
+}
+
+.right-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box {
+  width: 200px;
+  height: 180px;
+  background-color: #112949;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 calc(33.333% - 40px);
+}
+
+.box-logo {
+  font-size: 40px;
+  margin-bottom: 10px;
+  width: 58px;
+  height: 58px;
+}
+
+.box-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #3CC3F2;
+}
+
+.box-paragraph {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #FFFFFF;
+}
+
+.box .divLog{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .left-section, .right-section {
+    flex: 1 1 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .box {
+    flex: 1 1 calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    flex: 1 1 100%;
   }
 }
